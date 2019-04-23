@@ -7,13 +7,9 @@ scm {
     }
 	  steps {
         msBuild {
-            msBuildInstallation('MSBuild 1.8')
-            buildFile('dir1/build.proj')
-            args('check')
-            args('another')
-            passBuildVariables()
+            msBuildInstallation('MSBuild 15.0')
+            buildFile('HelloWorld.sln')
             continueOnBuildFailure()
-            unstableIfWarnings()
         }
     }
 }
