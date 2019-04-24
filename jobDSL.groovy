@@ -17,7 +17,7 @@ scm {
 	publishers {
         archiveArtifacts {
             pattern('HelloWorld/bin/Debug/*.exe')
-            onlyIfSuccessful()
+            onlyIfSuccessful(true)
         }
     }
 }
