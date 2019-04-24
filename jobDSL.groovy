@@ -15,8 +15,8 @@ scm {
     }
 	publishers {
         archiveArtifacts {
-            pattern('bin/Debug/*.exe')
-            pattern('bin/Debug/*.pdp')
+            pattern('HelloWorld/bin/Debug/*.exe')
+            pattern('HelloWorld/bin/Debug/*.pdp')
             onlyIfSuccessful()
         }
     }
