@@ -1,6 +1,6 @@
 job('DSL Job'){
 scm {
-        git('https://github.com/BHAVESHRAJ/Jenkins-test-helloworld')
+        git('https://github.com/BHAVESHRAJ/Jenkins-test-helloworld','master')
     }
 	label('msbuild')
     triggers {
@@ -11,6 +11,13 @@ scm {
             msBuildInstallation('MSBuild 15.0')
             buildFile('HelloWorld.sln')
             continueOnBuildFailure()
+        }
+    }
+	publishers {
+        archiveArtifacts {
+            pattern('bin/Debug/*.exe')
+            pattern('bin/Debug/*.pdp')
+            onlyIfSuccessful()
         }
     }
 }
