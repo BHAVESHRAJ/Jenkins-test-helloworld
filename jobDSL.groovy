@@ -1,7 +1,9 @@
 job('DSL Job'){
 scm {
         git('https://github.com/BHAVESHRAJ/Jenkins-test-helloworld')
+		 branch('master')
     }
+	label('msbuild')
     triggers {
         scm('H/15 * * * *')
     }
